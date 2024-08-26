@@ -8,12 +8,11 @@
     "loki": "bin/loki"
   },
   "scripts": {
-    "format": "prettier '{,packages/**/,examples/**/,website/**/,docs/**/,test/**/,.github/**/}*.{md,js,jsx,json,yml}' --write",
+    "format": "prettier '{,packages/**/,examples/**/,docs/**/,test/**/,.github/**/}*.{md,js,jsx,json,yml}' --write",
     "lint": "eslint packages/*/src",
     "pretest": "cd examples/running-renderer-aws-lambda && yarn build && yarn start",
     "test": "jest",
-    "test-ci": "jest --testLocationInResults --ci --outputFile=test_results.json --json",
-    "publish-docs": "GIT_USER=oblador yarn workspace @loki/website publish-gh-pages"
+    "test-ci": "jest --testLocationInResults --ci --outputFile=test_results.json --json"
   },
   "engines": {
     "node": ">=20"
@@ -35,7 +34,6 @@
     "packages": [
       "packages/*",
       "test/*",
-      "website",
       "examples/react",
       "examples/renderer-aws-lambda",
       "examples/running-renderer-aws-lambda"
